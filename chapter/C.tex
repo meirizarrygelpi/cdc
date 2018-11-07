@@ -1,0 +1,227 @@
+% Copyright 2018 Melvin Eloy Irizarry-Gelpí
+\chapter{W Binions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+A W binion has the form
+\begin{equation}
+    a_{0} + a_{1} W
+\end{equation}
+These follow from a parabolic Cayley-Dickson construct on the reals. Since you need two real numbers for a W binion, you can represent a W binion as a pair.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Multiplication}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The multiplication operation is non-trivial. Since the W binions are a parabolic Cayley-Dickson construct, you use the parabolic multiplication operation. If
+\begin{align}
+    x &= \begin{pmatrix}
+        x_{0} & x_{1}
+    \end{pmatrix} & y &= \begin{pmatrix}
+        y_{0} & y_{1}
+    \end{pmatrix}
+\end{align}
+then
+\begin{equation}
+    z = x \wedge y = \begin{pmatrix}
+        x_{0} y_{0} & y_{1} x_{0} + y_{0} x_{1}
+    \end{pmatrix}
+\end{equation}
+Note that this multiplication operation is commutative. Note that
+\begin{equation}
+    W = \begin{pmatrix}
+        0 & 1
+    \end{pmatrix}
+\end{equation}
+which leads to
+\begin{equation}
+    W \wedge W = \begin{pmatrix}
+        0 & 0
+    \end{pmatrix}
+\end{equation}
+That is, $W$ is nilpotent.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conjugate Operations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+There are many conjugate operations acting on W binions.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Asterisk Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the asterisk conjugation is
+\begin{equation}
+    {\ast z} = \begin{pmatrix}
+        z_{0} & -z_{1}
+    \end{pmatrix}
+\end{equation}
+Note that this is an involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Quadrance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the quadrance is given by
+\begin{equation}
+    \Vert z \Vert^{2} = (z_{0})^{2}
+\end{equation}
+Note that the quadrance takes non-negative values. However, you can have zero-quadrance from a non-trivial W binion. Any W binion of the form
+\begin{equation}
+    \begin{pmatrix}
+        0 & z_{1}
+    \end{pmatrix}
+\end{equation}
+has zero quadrance.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Cloak Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the cloak conjugation is
+\begin{equation}
+    {\diamond z} = \begin{pmatrix}
+        -z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+Note that this is an involution. Cloak conjugation is equivalent to negation of the asterisk conjugation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Dagger Conjugation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the dagger conjugation is
+\begin{equation}
+    {\dagger z} = \begin{pmatrix}
+        z_{0} & -z_{1}
+    \end{pmatrix}
+\end{equation}
+Note that this is equivalent to the asterisk conjugation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hodge Star}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the Hodge star is
+\begin{equation}
+    {\star z} = \begin{pmatrix}
+        z_{1} & z_{0}
+    \end{pmatrix}
+\end{equation}
+Note that this is an involution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Zero-Divisors}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since multiplication of non-zero W binions can lead to zero, there are non-trivial zero-divisors. For example, if
+\begin{align}
+    x &= \begin{pmatrix}
+        0 & x_{1}
+    \end{pmatrix} & y &= \begin{pmatrix}
+        0 & y_{1}
+    \end{pmatrix}
+\end{align}
+then
+\begin{equation}
+    z = x \wedge y = \begin{pmatrix}
+        0 & 0
+    \end{pmatrix}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Decompositions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With so many involutions you can have many decomposition.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Asterisk Decomposition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since the asterisk conjugation is an involution, you can have the following decomposition:
+\begin{equation}
+    z = \frac{1}{2} \left( z + {\ast z} \right) + \frac{1}{2} \left( z - {\ast z} \right)
+\end{equation}
+The first term is the self-asterisk part of $z$ and the second term is the anti-self-asterisk part of $z$. If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the \textbf{self-asterisk part} of $z$ is given by
+\begin{equation}
+    \frac{1}{2} \left( z + {\ast z} \right) = \begin{pmatrix}
+        z_{0} & 0
+    \end{pmatrix}
+\end{equation}
+and the \textbf{anti-self-asterisk part} of $z$ is given by
+\begin{equation}
+    \frac{1}{2} \left( z - {\ast z} \right) = \begin{pmatrix}
+        0 & z_{1}
+    \end{pmatrix}
+\end{equation}
+Note that the anti-self-asterisk part of $z$ is always nilpotent.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Hodge Star Decomposition}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Since the Hodge star operation is an involution, you can have the following decomposition:
+\begin{equation}
+    z = \frac{1}{2} \left( z + {\star z} \right) + \frac{1}{2} \left( z - {\star z} \right)
+\end{equation}
+The first term is the self-star part of $z$ and the second term is the anti-self-star part of $z$. If
+\begin{equation}
+    z = \begin{pmatrix}
+        z_{0} & z_{1}
+    \end{pmatrix}
+\end{equation}
+then the \textbf{self-star part} of $z$ is given by
+\begin{equation}
+    \frac{1}{2} \left( z + {\star z} \right) = \frac{1}{2} (z_{0} + z_{1}) \begin{pmatrix}
+        1 & 1
+    \end{pmatrix}
+\end{equation}
+and the \textbf{anti-self-star part} of $z$ is given by
+\begin{equation}
+    \frac{1}{2} \left( z - {\star z} \right) = \frac{1}{2} (z_{0} - z_{1}) \begin{pmatrix}
+        1 & {-1}
+    \end{pmatrix}
+\end{equation}
+Note that the self-star and anti-self-star parts are proportional to W binions that are idempotent. If
+\begin{align}
+    P &\equiv \frac{1}{2} \begin{pmatrix}
+        1 & 1
+    \end{pmatrix} & Q &\equiv \frac{1}{2} \begin{pmatrix}
+        1 & {-1}
+    \end{pmatrix}
+\end{align}
+then
+\begin{align}
+    P \wedge P &= P & Q \wedge Q &= Q
+\end{align}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Differential Operators}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+With two real variables $x$ and $y$, you can define a W binion variable $z$ via
+\begin{equation}
+    z = \begin{pmatrix}
+        x & y
+    \end{pmatrix}
+\end{equation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{M\"{o}bius Transformations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Cross-Ratio}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+...
